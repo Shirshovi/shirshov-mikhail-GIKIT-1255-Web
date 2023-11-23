@@ -1,24 +1,48 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+let name = "Mikhail";
+const age = 19
+let logic = true;
+console.log("->name-", name)
+name = "Alex";
+console.log("->name-", name)
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+console.log('->name=', name, age, logic);
+name = "Alex";
+// age=19
+logic = false
 
-setupCounter(document.querySelector('#counter'))
+//alert('Hi');
+let apple = {
+  colour: "red",
+  colour: "green",
+  taste: "sweet",
+
+}
+
+console.log('->start=', apple);
+
+let apple2 = apple
+let AppleTaste = apple.taste
+apple2.taste = "sour"
+console.log('->apple=', AppleTaste, apple.taste);
+
+let fruits = ['apple', 'orange', 'lemon', 'grape'];
+
+console.log('->fruits=', fruits, fruits.taste);
+console.log('-> fruits =', fruits);
+console.log('-> fruits 2 =', fruits[0]);
+
+for (let index = 0; index < fruits.length; index++) {
+  OutputfruitOnscreen(index);
+}
+
+function OutputfruitOnscreen(index) {
+  const fruit = fruits[index];
+  console.log('-> fruit= ', fruit.length);
+  const node = document.createElement('div');
+  const text = "Fruit in basket: " + fruit;
+  node.innerText = text
+  document.body.appendChild(node);
+}
+
+
+
